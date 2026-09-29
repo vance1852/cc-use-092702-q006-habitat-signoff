@@ -1,0 +1,127 @@
+{
+  "protocols": [
+    {
+      "protocol_id": "understory-veg",
+      "version": 1,
+      "discipline": "forester",
+      "title": "林下植被样方调查协议",
+      "season": "2026 雨季前",
+      "quadrat_area_m2": 100
+    },
+    {
+      "protocol_id": "bird-breeding",
+      "version": 1,
+      "discipline": "ecologist",
+      "title": "鸟类繁殖地鸣声与巢位调查协议",
+      "survey_window": "2026-04 至 2026-07",
+      "point_count_minutes": 10
+    },
+    {
+      "protocol_id": "rain-drainage",
+      "version": 1,
+      "discipline": "engineer",
+      "title": "雨季坡面排水水文测算协议",
+      "return_period_years": 20,
+      "method": "rational"
+    }
+  ],
+  "boundaries": [
+    {
+      "boundary_id": "veg-plot-a",
+      "discipline": "forester",
+      "crs": "EPSG:32649",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[412000, 3315000], [412100, 3315000], [412100, 3315100], [412000, 3315100], [412000, 3315000]]]
+      }
+    },
+    {
+      "boundary_id": "bird-zone-a",
+      "discipline": "ecologist",
+      "crs": "EPSG:32649",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[411950, 3314950], [412200, 3314950], [412200, 3315200], [411950, 3315200], [411950, 3314950]]]
+      }
+    },
+    {
+      "boundary_id": "drain-line-a",
+      "discipline": "engineer",
+      "crs": "EPSG:32649",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[411900, 3314900, 812], [412300, 3315300, 790]]
+      }
+    }
+  ],
+  "subjects": [
+    {
+      "subject_id": "site-veg",
+      "code": "VIEW-VEG-01",
+      "title": "观景平台选址-林下植被影响",
+      "discipline_scope": "forester",
+      "batch_id": "veg-batch-1"
+    },
+    {
+      "subject_id": "site-bird",
+      "code": "VIEW-BIRD-01",
+      "title": "观景平台选址-鸟类繁殖地影响",
+      "discipline_scope": "ecologist",
+      "batch_id": "bird-batch-1"
+    },
+    {
+      "subject_id": "site-drain",
+      "code": "VIEW-DRAIN-01",
+      "title": "观景平台选址-雨季排水影响",
+      "discipline_scope": "engineer",
+      "batch_id": "drain-batch-1"
+    }
+  ],
+  "evidence": {
+    "veg-batch-1": {
+      "discipline": "forester",
+      "protocol_id": "understory-veg",
+      "protocol_version": 1,
+      "collected_by": "巡护样方组",
+      "collected_at": "2026-05-12T08:30:00+08:00",
+      "items": [
+        {"source_ref": "Q-01", "evidence_type": "quadrat_cover", "payload": {"shrub_cover": 0.62, "herb_cover": 0.41, "native_ratio": 0.88}},
+        {"source_ref": "Q-02", "evidence_type": "quadrat_cover", "payload": {"shrub_cover": 0.55, "herb_cover": 0.38, "native_ratio": 0.81}},
+        {"source_ref": "Q-03", "evidence_type": "rare_species", "payload": {"species": "独蒜兰", "individuals": 2}}
+      ]
+    },
+    "bird-batch-1": {
+      "discipline": "ecologist",
+      "protocol_id": "bird-breeding",
+      "protocol_version": 1,
+      "collected_by": "生态监测组",
+      "collected_at": "2026-05-20T05:40:00+08:00",
+      "items": [
+        {"source_ref": "P-01", "evidence_type": "point_count", "payload": {"species": "白鹇", "contacts": 3, "breeding_evidence": "feeding_young"}},
+        {"source_ref": "P-02", "evidence_type": "nest_record", "payload": {"species": "白鹇", "nest_distance_m": 142, "status": "active"}},
+        {"source_ref": "P-03", "evidence_type": "point_count", "payload": {"species": "红头咬鹃", "contacts": 1, "breeding_evidence": "territory_call"}}
+      ]
+    },
+    "drain-batch-1": {
+      "discipline": "engineer",
+      "protocol_id": "rain-drainage",
+      "protocol_version": 1,
+      "collected_by": "水文测算组",
+      "collected_at": "2026-06-02T10:00:00+08:00",
+      "items": [
+        {"source_ref": "H-01", "evidence_type": "slope_runoff", "payload": {"catchment_ha": 3.8, "slope_pct": 27, "runoff_mm": 96}},
+        {"source_ref": "H-02", "evidence_type": "culvert_capacity", "payload": {"design_flow_m3s": 1.2, "estimated_flow_m3s": 0.94}}
+      ]
+    }
+  },
+  "supplement": {
+    "drain-batch-1": [
+      {"source_ref": "H-03", "evidence_type": "slope_runoff", "payload": {"catchment_ha": 4.1, "slope_pct": 31, "runoff_mm": 121}}
+    ]
+  },
+  "signoff_chain": [
+    {"sequence": 1, "role": "forester", "title": "林业会签"},
+    {"sequence": 2, "role": "ecologist", "title": "生态会签"},
+    {"sequence": 3, "role": "engineer", "title": "工程会签"}
+  ]
+}
