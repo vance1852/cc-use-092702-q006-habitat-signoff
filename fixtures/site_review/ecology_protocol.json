@@ -1,0 +1,14 @@
+{
+  "protocol_id": "bird-breeding-v1",
+  "version": 1,
+  "domain": "ecology",
+  "title": "观景平台选址鸟类繁殖地调查协议",
+  "spec": {
+    "method": "point_count_and_nest_search",
+    "point_count_minutes": 20,
+    "visit_rounds": 4,
+    "indicators": ["active_nest_count", "territory_density", "sensitive_species"],
+    "season_window": "2026-04-15/2026-07-20",
+    "sampling_rule": "清晨日出后三小时内定点监听，巢位坐标误差不超过 10 米"
+  }
+}

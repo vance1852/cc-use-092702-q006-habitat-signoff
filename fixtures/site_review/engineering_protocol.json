@@ -1,0 +1,13 @@
+{
+  "protocol_id": "rain-drainage-v1",
+  "version": 1,
+  "domain": "engineering",
+  "title": "观景平台选址雨季排水评估协议",
+  "spec": {
+    "method": "runoff_modeling_and_transect",
+    "design_storm_recurrence_years": 20,
+    "indicators": ["peak_runoff_lps", "culvert_capacity_lps", "slope_percent", "inundation_area_m2"],
+    "season_window": "2026-05-01/2026-09-15",
+    "sampling_rule": "沿等高线每 50 米布设断面，沟道糙率取 0.035 到 0.050"
+  }
+}

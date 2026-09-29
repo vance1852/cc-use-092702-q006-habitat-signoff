@@ -1,0 +1,14 @@
+{
+  "protocol_id": "forest-understory-v1",
+  "version": 1,
+  "domain": "forestry",
+  "title": "观景平台选址林下植被样方调查协议",
+  "spec": {
+    "method": "quadrat",
+    "quadrat_side_meters": 10,
+    "quadrat_count": 12,
+    "indicators": ["shrub_cover_ratio", "herb_cover_ratio", "protected_species_count"],
+    "season_window": "2026-06-01/2026-08-31",
+    "sampling_rule": "沿平台中心线两侧各 30 米系统布点，每个样方留存定位与影像"
+  }
+}

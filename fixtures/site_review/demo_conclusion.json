@@ -1,0 +1,41 @@
+{
+  "boundary": {
+    "boundary_id": "north-ridge-platform-zone",
+    "label": "北脊观景平台候选范围",
+    "source_text": "保护站 2026-08 实测勘界，CGCS2000 / 3-degree Gauss-Kruger zone 38 转 WGS84",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [118.7201, 27.9402],
+          [118.7284, 27.9405],
+          [118.7288, 27.9351],
+          [118.7206, 27.9348],
+          [118.7201, 27.9402]
+        ]
+      ]
+    }
+  },
+  "manifests": {
+    "forestry": [
+      {"quadrat": "Q01", "shrub_cover_ratio": "0.42", "herb_cover_ratio": "0.61", "protected_species_count": 0, "photo": "IMG_Q01.jpg"},
+      {"quadrat": "Q02", "shrub_cover_ratio": "0.38", "herb_cover_ratio": "0.55", "protected_species_count": 0, "photo": "IMG_Q02.jpg"},
+      {"quadrat": "Q03", "shrub_cover_ratio": "0.47", "herb_cover_ratio": "0.63", "protected_species_count": 1, "photo": "IMG_Q03.jpg"}
+    ],
+    "forestry_supplemented": [
+      {"quadrat": "Q01", "shrub_cover_ratio": "0.42", "herb_cover_ratio": "0.61", "protected_species_count": 0, "photo": "IMG_Q01.jpg"},
+      {"quadrat": "Q02", "shrub_cover_ratio": "0.38", "herb_cover_ratio": "0.55", "protected_species_count": 0, "photo": "IMG_Q02.jpg"},
+      {"quadrat": "Q03", "shrub_cover_ratio": "0.47", "herb_cover_ratio": "0.63", "protected_species_count": 1, "photo": "IMG_Q03.jpg"},
+      {"quadrat": "Q04", "shrub_cover_ratio": "0.35", "herb_cover_ratio": "0.58", "protected_species_count": 0, "photo": "IMG_Q04.jpg"},
+      {"quadrat": "Q05", "shrub_cover_ratio": "0.41", "herb_cover_ratio": "0.60", "protected_species_count": 0, "photo": "IMG_Q05.jpg"}
+    ],
+    "ecology": [
+      {"point": "P1", "round": 1, "active_nest_count": 2, "territory_density": "0.18", "sensitive_species": ["bust-h"], "audio": "P1_R1.wav"},
+      {"point": "P2", "round": 2, "active_nest_count": 1, "territory_density": "0.12", "sensitive_species": [], "audio": "P2_R2.wav"}
+    ],
+    "engineering": [
+      {"transect": "T1", "peak_runoff_lps": "310", "culvert_capacity_lps": "520", "slope_percent": "8.5", "inundation_area_m2": "0"},
+      {"transect": "T2", "peak_runoff_lps": "470", "culvert_capacity_lps": "430", "slope_percent": "12.0", "inundation_area_m2": "160"}
+    ]
+  }
+}
